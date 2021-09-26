@@ -1,21 +1,10 @@
 {
-  "name": "babel-plugin-file-loader",
-  "version": "2.0.0",
-  "description": "Like file-loader for webpack, but for Babel. Works with SSE apps.",
+  "name": "@openovate/babel-plugin-file-loader",
+  "version": "2.0.1",
+  "description": "Shim of sheerun/babel-plugin-file-loader",
   "author": "Adam Stankiewicz <sheerun@sher.pl>",
-  "repository": "sheerun/babel-plugin-file-loader",
+  "repository": "https://github.com/cblanquera/babel-plugin-file-loader",
   "license": "MIT",
-  "keywords": [
-    "nextjs",
-    "babel",
-    "import",
-    "loader",
-    "static",
-    "images",
-    "cdn",
-    "sse",
-    "isomorphic"
-  ],
   "main": "src/index.js",
   "files": [
     "src"

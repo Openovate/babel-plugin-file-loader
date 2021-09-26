@@ -22,16 +22,14 @@ const applyTransform = (p, t, state, value, calleeName) => {
 
   if (options.extensions && options.extensions.indexOf(ext.slice(1)) >= 0) {
     try {
-      let rootPath, filePath
-
-      if (value[0] === '.') {
-        rootPath = state.file.opts.sourceRoot || process.cwd()
-        const scriptDirectory = dirname(resolve(state.file.opts.filename))
-        filePath = resolve(scriptDirectory, value)
+      let filePath
+      const rootPath = state.file.opts.sourceRoot || process.cwd()
+      if (value.indexOf('/') === 0) {
+        filePath = value
+      } else if (value.indexOf('.') === 0) {
+        filePath = resolve(dirname(state.file.opts.filename), value)
       } else {
-        const pkg = value.split('/', 1)[0]
-        rootPath = resolve(pkg)
-        filePath = value.substr(pkg.length + 1)
+        filePath = resolve(__dirname, '../../..', value)
       }
 
       const uri = transform(rootPath, filePath, options)

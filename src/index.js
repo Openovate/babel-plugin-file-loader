@@ -23,7 +23,7 @@ const applyTransform = (p, t, state, value, calleeName) => {
   if (options.extensions && options.extensions.indexOf(ext.slice(1)) >= 0) {
     try {
       let filePath
-      const rootPath = state.file.opts.sourceRoot || process.cwd()
+      const rootPath = process.cwd()
       if (value.indexOf('/') === 0) {
         filePath = value
       } else if (value.indexOf('.') === 0) {

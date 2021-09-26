@@ -1,6 +1,6 @@
 {
   "name": "@openovate/babel-plugin-file-loader",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Shim of sheerun/babel-plugin-file-loader",
   "author": "Adam Stankiewicz <sheerun@sher.pl>",
   "repository": "https://github.com/cblanquera/babel-plugin-file-loader",
